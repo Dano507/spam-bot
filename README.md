@@ -8,8 +8,9 @@
   [here](https://https://nodejs.org/en/)
   1. Clone the repository
   2. Rename `src/env-template.json` to `src/env.json`
-  3. open a terminal in the project root and type
-    `npm run start`
+  3. open a terminal in the project root and run `npm 
+    install`
+  4. run `npm run start`
 
 # Commands
   substitute `!` with your prefix (in env.json)
