@@ -1,5 +1,8 @@
 const env = require("./env.json")
 const { Client, Intents } = require("discord.js")
+const fs = require("fs")
+
+const moduleFolder = "modules"
 
 const client = new Client({ 
   intents: [
@@ -11,11 +14,18 @@ const client = new Client({
 
 // App start
 client.once("ready", () => {
-  console.log("Bot is up and running")
-})
+  // Start modules
+  modules = fs.readdirSync(`${__dirname}/${moduleFolder}`)
+  for (let i in modules) {
+    require(`./${moduleFolder}/${modules[i]}`)({
+      prefix: env.prefix,
+      client: client,
+    })
+  }
+  console.log(modules)
 
-client.on("messageCreate", (m) => {
-  
+  // Indicate bot ready
+  console.log("Bot is up and running")
 })
 
 client.login(env.appId)
