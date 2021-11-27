@@ -3,14 +3,22 @@
   purpose of spamming to get anigame cards
 
 # Quick start
-  Make sure you have Nodejs installed, which is required 
-  to run JavaScript. Nodejs can be installed 
-  [here](https://https://nodejs.org/en/)
-  1. Clone the repository
-  2. Rename `src/env-template.json` to `src/env.json`
-  3. open a terminal in the project root and run `npm 
-    install`
+  ## Prerequisites:
+  - Make sure you have [NodeJS](https://https://nodejs.org/en/)
+  installed.
+  - Setup a [Discord application with a Bot](https://discordjs.guide/\
+  preparations/setting-up-a-bot-application.html#creating-your-bot),
+  and keep your Bot token handy.
+
+
+  ## Instructions:
+  1. Open a terminal, and clone the repository
+  2. cd into the project then run `npm install`
+  3. Rename `src/env-template.json` to `src/env.json` then
+    enter your bot token in the "appId" field
   4. run `npm run start`
+
+
 
 # Commands
   substitute `!` with your prefix (in env.json)
