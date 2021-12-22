@@ -1,7 +1,10 @@
 # About
   This is a Discord bot written in Nodejs, with the sole 
   purpose of spamming to get anigame cards
-  
+
+
+# To-Do:
+- [ ] Fix bug where bot keeps spamming after stopped on server
 
 # Quick start
   ## Prerequisites:
