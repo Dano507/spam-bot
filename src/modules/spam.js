@@ -1,11 +1,14 @@
 state = {
-  spamming: false
+  spamming: false,
+  channel: "",
 }
 
 main = (vars) => {
-  vars.client.on("messageCreate", (m) => {  
+  vars.client.on("messageCreate", (m) => {
     if (m.content.toLowerCase().startsWith(`${vars.prefix}spam on`)) {
       state.spamming = true
+      state.channel = m.channel.id
+
       console.log("Spammming")
       m.channel.send("Spamming")
     }
@@ -17,7 +20,7 @@ main = (vars) => {
 
     // Spam if true
     if (state.spamming && m.content !== "") {
-      m.channel.send("spam")
+      vars.client.channels.cache.get(state.channel).send("spam")
       console.log("spam")
     }
   })
