@@ -8,7 +8,7 @@
 
 # Quick start
   ## Prerequisites:
-  - Make sure you have [NodeJS](https://https://nodejs.org/en/)
+  - Make sure you have [NodeJS](https://nodejs.org/en/)
   installed.
   - Setup a [Discord application with a Bot](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot),
   and keep your Bot token handy.
